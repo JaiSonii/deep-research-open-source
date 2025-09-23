@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/deep_research/openrouter.py
+src/deep_research/prompts.py
+src/deep_research/scope_research.py
+src/deep_research/state_scope.py
+src/deep_research_opensource.egg-info/PKG-INFO
+src/deep_research_opensource.egg-info/SOURCES.txt
+src/deep_research_opensource.egg-info/dependency_links.txt
+src/deep_research_opensource.egg-info/requires.txt
+src/deep_research_opensource.egg-info/top_level.txt
