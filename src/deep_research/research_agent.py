@@ -45,8 +45,6 @@ def llm_call(state : ResearchState):
                + state['researcher_messages']
 
     result = structured_model.invoke(messages)
-    print('-----------------------------------LLM CALL-------------------------------------')
-    print(state)
 
     ai_message = AIMessage(
         content=result.research_message or "",
@@ -59,8 +57,6 @@ def llm_call(state : ResearchState):
 
 
 def tool_node(state : ResearchState):
-    print('-----------------------------------Tool Node-------------------------------------')
-    print(state)
     tool_calls = state['researcher_messages'][-1].tool_calls
     observations = []
     for tool_call in tool_calls:
@@ -78,8 +74,6 @@ def tool_node(state : ResearchState):
     return {'researcher_messages' : tool_outputs}
 
 def should_continue(state : ResearchState) -> Literal['llm_call','compress_research']:
-    print('-----------------------------------Should continue-------------------------------------')
-    print(state)
     last_message = state['researcher_messages'][-1]
     if last_message.tool_calls:
         return 'tool_node'

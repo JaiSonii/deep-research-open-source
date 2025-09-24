@@ -16,7 +16,7 @@ def get_today_str():
     return datetime.now().strftime("%Y -%m -%d")
 
 # define the model
-summary_model = init_chat_model(model='google/gemma-3-4b-it:free', temperature=0.3, api_key=getenv('OPENROUTER_API_KEY'))
+summary_model = init_chat_model(model='qwen/qwen3-4b:free', temperature=0.3, api_key=getenv('OPENROUTER_API_KEY'))
 
 # init tavily_client
 tavily_client = TavilyClient(api_key=getenv('TAVILY_API_KEY'))
